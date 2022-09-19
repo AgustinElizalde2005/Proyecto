@@ -1,0 +1,282 @@
+/* --->Configuracion general de la pagina <--- */
+* {
+    /* Lo utilizaremos para el responsive, seria la suma del ancho y relleno de los elementos */
+    box-sizing: border-box;
+}
+
+html {
+    /* La pagina se mueve de forma lenta al bajar */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(255, 240, 201);
+}
+
+
+/* Configuracion general de la navegacion "menu Selectivo" */
+
+header .logo {
+    margin: 0;
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+header .f {
+    display: flex;
+    flex-direction: column;
+    /* Contenido en columnas */
+    align-items: center;
+    /* Centramos los elementos*/
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+.principal {
+    max-width: 1400px;
+    /*Tamaño maximo de anchura*/
+    margin: auto;
+}
+
+#carouselExampleControls img {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+}
+
+/* Configurar el cuerpo del index */
+
+#comida .cont {
+    text-align: center;
+    padding: 80px 12px;
+    margin-top: -3%;
+}
+
+
+.texto p {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: -20px;
+}
+
+/* Configuracion general de la pagina */
+h1 {
+    font-size: 3.5em;
+}
+
+/*em--->unidad de medida*/
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+.img-cont {
+    background-image: url("../img/empanadas.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    width: 450px;
+    border-radius: 25px;
+}
+
+/*06-09*/
+/*--->Sector FlexBox*/
+.sector-fotos {
+    margin-top: -2%;
+
+}
+
+.sector-fotos h2 {
+    text-align: left;
+    color: dodgerblue;
+    margin-top: 1%;
+    margin-left: 9%;
+    font-weight: bold;
+    font-size: 30;
+    text-align: left;
+}
+
+.sector-fotos img {
+    width: 370px;
+    height: 350px;
+    margin-top: 10%;
+    margin-left: 15%;
+    border: 2px solid cadetblue;
+    border-radius: 10%;
+}
+
+#cont-foto {
+    display: flex;
+    flex-flow: row wrap;
+    /*Imagenes una al lado de la otra en forma de linea*/
+    justify-content: center;
+    /*Centramos*/
+    align-items: center;
+    margin-top: 1%;
+}
+
+.ultima-foto {
+    color: cadetblue;
+    text-align: center;
+    margin-top: 300%;
+}
+
+.galeria {
+    background-color: white;
+    width: 350px;
+    margin: 10px;
+    border: 2px solid cadetblue;
+    box-shadow: 2px 2px 2px 0 cadetblue;
+    /*Sombra*/
+    transition: all 1s;
+    /*Efecto al segundo*/
+    transition: 1.3s ease-in-out;
+    /*Movimiento lento*/
+}
+
+.galeria :hover {
+    border: 2px solid cadetblue;
+    transform: scale(1.3);
+}
+
+.foto {
+    height: 200px;
+    background-size: cover;
+}
+
+.autor {
+    text-transform: uppercase;
+    color: cadetblue;
+    padding: 15px;
+    text-align: center;
+}
+
+.foto1 {
+    background-image: url("../img/ñoqui.jpg");
+}
+
+.foto2 {
+    background-image: url("../img/empanadas.jpg");
+}
+
+.foto3 {
+    background-image: url("../img/pizza.jpg");
+}
+
+.contenedor :hover {
+    transform: scale(1.3);
+}
+
+.contenedor2 :hover {
+    transform: scale(1.3);
+}
+
+.contenedor3 :hover {
+    transform: scale(1.3);
+}
+
+/* Key Frame "Sector galeria" */
+
+
+
+/* Responsive ---> Distintas pantallas*/
+
+@media(min-width:850px) {
+    header {
+        position: relative;
+        /*Pantalla por defecto, posicionada en la parte superior*/
+        width: 100%;
+    }
+
+    header .principal {
+        flex-direction: row;
+        /*Filas*/
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    #carouselExampleControls img {
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+    }
+
+    /* Clase 06-09 */
+    #comida .cont {
+        display: flex;
+        justify-content: space-evenly;
+        /*Colocar hacia la esquina derecha*/
+    }
+
+    #comida .texto {
+        width: 56%;
+        max-width: 600px;
+        text-align: initial;
+        /*Texto horizontal*/
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #comida h2 {
+        margin-top: 0px;
+
+    }
+
+    .img1 {
+        background-image: url("../img/empanadas.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 380px;
+        width: 600px;
+        border-radius: 25px;
+    }
+
+
+}
+
+
+
